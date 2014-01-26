@@ -1,0 +1,7 @@
+{
+    "name": "cornernote/phpthumb",
+    "description": "The PHP thumbnail creator",
+    "type": "library",
+    "keywords": ["phpthumb","mrphp"],
+    "minimum-stability": "dev"
+}
