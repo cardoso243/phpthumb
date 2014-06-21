@@ -1303,7 +1303,7 @@ class phpthumb {
 			// $UnAllowedParameters contains options that can only be processed in GD, not ImageMagick
 			// note: 'fltr' *may* need to be processed by GD, but we'll check that in more detail below
 			$UnAllowedParameters = array('xto', 'ar', 'bg', 'bc');
-			// 'ra' may be part of this list, if not a multiple of 90°
+			// 'ra' may be part of this list, if not a multiple of 90ï¿½
 			foreach ($UnAllowedParameters as $parameter) {
 				if (isset($this->$parameter)) {
 					$this->DebugMessage('$this->useRawIMoutput=false because "'.$parameter.'" is set', __FILE__, __LINE__);
@@ -1502,7 +1502,7 @@ class phpthumb {
 // makes 1x1 output
 // http://trainspotted.com/phpThumb/phpThumb.php?src=/content/CNR/47/CNR-4728-LD-L-20110723-898.jpg&w=100&h=100&far=1&f=png&fltr[]=lvl&sx=0.05&sy=0.25&sw=0.92&sh=0.42
 // '/usr/bin/convert' -density 150 -thumbnail 100x100 -contrast-stretch '0.1%' '/var/www/vhosts/trainspotted.com/httpdocs/content/CNR/47/CNR-4728-LD-L-20110723-898.jpg[0]' png:'/var/www/vhosts/trainspotted.com/httpdocs/phpThumb/_cache/pThumbIIUlvj'
-//							$commandline .= ' -crop '.escapeshellarg($crop_param);
+							$commandline .= ' -crop '.escapeshellarg($crop_param);
 
 							// this is broken for aoe=1, but unsure how to fix. Send advice to info@silisoftware.com
 							if ($this->w || $this->h) {
